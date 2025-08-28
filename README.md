@@ -1,12 +1,13 @@
 # Notes
 SAP CAPM Notes
+================================================================
 commands of sap capm:
 1. cf apps
 2. cf start appname
 3. cf scale -i noofinstance(horizontal scaling)
 4. cf scale -m noofgb(vertical scaling)
 5. cf push appname
-
+================================================================
 
 question:Importance of manifest.yml file in sap btp
 ans)The manifest.yml file is important in SAP BTP (especially the Cloud Foundry environment) because it acts as a deployment descriptor, specifying how an application should be deployed, configured, and managed in the cloud.
@@ -21,7 +22,7 @@ It can be tracked in source control, enabling teams to maintain deployment confi
 
 Manifest files support automation and CI/CD pipelines, providing a single source of truth for deployment requirements and reducing manual errors when moving apps between environments.
 
-
+=============================================================================================================================
 
 Question: what is the difference between cf push and cf push appname
 ans)The difference between cf push and cf push APP-NAME in SAP BTP (Cloud Foundry) is in how the app name is determined and how deployments are managed with or without a manifest file.
@@ -52,5 +53,10 @@ cf push APP-NAME deploys just the specified app, using CLI or manifest settings,
 Both commands support additional flags for custom deployments (e.g., cf push APP-NAME -f manifest.yml).
 
 Using just cf push deploys all apps from the manifest file, while cf push APP-NAME deploys only the named app, which is critical in multi-app projects and for targeted updates.
+==================================================================================================
+   commands to push the table changes to sql lite in capm
 
-   
+   1. cds compile db/db_filename.cds -2 sql -----> this doesnot generates the physical artifact in the database. rather it checks the inconsistenciews .
+   2. cds deploy --to sqlite----> actually deploys the artifacts in the database.
+study the question what is the difference between cds deploy and cds compile
+===================================================================================================
